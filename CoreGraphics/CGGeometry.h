@@ -61,6 +61,10 @@ static inline CGRect CGRectInset(CGRect rect,CGFloat dx,CGFloat dy) {
    return rect;
 }
 
+static inline bool CGRectIsEmpty(CGRect rect) {
+   return ((rect.size.width==0) && (rect.size.height==0))?TRUE:FALSE;
+}
+
 static inline bool CGRectIntersectsRect(CGRect a, CGRect b)
 {
     if(b.origin.x > a.origin.x + a.size.width)
@@ -73,3 +77,4 @@ static inline bool CGRectIntersectsRect(CGRect a, CGRect b)
         return false;
     return true;
 }
+
